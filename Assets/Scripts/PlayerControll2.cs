@@ -15,6 +15,8 @@ public class PlayerControll2 : MonoBehaviour
 
     private bool isGrounded2; //Verificar se o personagem está no chão
 
+    public Animator Anim; //Animação
+
     private void Awake()
     {
         rb2 = GetComponent<Rigidbody2D>(); //Pega o RigidBody2d
@@ -38,5 +40,16 @@ public class PlayerControll2 : MonoBehaviour
     {
         rb2.velocity = new Vector2(horizontal2 * speed2, rb2.velocity.y); //Lógica da física
     }
+
+    private void LateUpdate()
+    {
+        if (Input.GetKey(KeyCode.D))
+            Anim.SetBool("Isrun", true);
+
+        else
+            Anim.SetBool("Isrun", false);
+    }
+
+
 
 }

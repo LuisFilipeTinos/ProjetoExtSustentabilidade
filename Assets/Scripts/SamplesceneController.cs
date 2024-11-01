@@ -27,4 +27,5 @@ public class NewBehaviourScript : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
+
 }
