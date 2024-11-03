@@ -3064,6 +3064,8 @@ MonoBehaviour:
   - {fileID: 844218970}
   breakHeart: {fileID: 21300000, guid: e453a8c48059b6d40a9375877a058f2e, type: 3}
   fullHeart: {fileID: 21300000, guid: 496d2284a996d8647a9e8e5b328406d9, type: 3}
+  NinjaFrogDeath: {fileID: 0}
+  PinkManDeath: {fileID: 0}
 --- !u!1 &366366892
 GameObject:
   m_ObjectHideFlags: 0
@@ -3436,6 +3438,8 @@ MonoBehaviour:
   - {fileID: 779566018}
   breakHeart: {fileID: 21300000, guid: e453a8c48059b6d40a9375877a058f2e, type: 3}
   fullHeart: {fileID: 21300000, guid: 496d2284a996d8647a9e8e5b328406d9, type: 3}
+  NinjaFrogDeath: {fileID: 0}
+  PinkManDeath: {fileID: 0}
 --- !u!1 &388788582
 GameObject:
   m_ObjectHideFlags: 0
@@ -5012,7 +5016,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599704584}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.071266085, y: -0.014969179, z: -0.0010696353, w: 0.99734443}
+  m_LocalRotation: {x: -0.07126609, y: -0.014969179, z: -0.0010696354, w: 0.99734443}
   m_LocalPosition: {x: 6.965662, y: -1.9480398, z: -9.87658}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9945,7 +9949,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287174594}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.071266085, y: -0.014969179, z: -0.0010696353, w: 0.99734443}
+  m_LocalRotation: {x: -0.07126609, y: -0.014969179, z: -0.0010696354, w: 0.99734443}
   m_LocalPosition: {x: 6.965662, y: -1.9480398, z: -9.87658}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
