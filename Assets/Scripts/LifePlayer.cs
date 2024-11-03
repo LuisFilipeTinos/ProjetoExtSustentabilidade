@@ -7,17 +7,12 @@ public class LifePlayer : MonoBehaviour
 
     public int life = 3;
     public int currentLife; //Váriaveis que controlam a vida do personagem
+    public int knockbackForce = 5;
     
     // Start is called before the first frame update
     void Start()
     {
         currentLife = life;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void Damage()
@@ -29,6 +24,18 @@ public class LifePlayer : MonoBehaviour
         if (currentLife <= 0)
         {
             Debug.Log("Morreu");
+        }
+
+    }
+
+    public void Knockback(Vector2 KnockbackDirection)
+    {
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
+        if (rb != null)
+        {
+            rb.AddForce (KnockbackDirection.normalized * knockbackForce, ForceMode2D.Impulse);
         }
 
     }

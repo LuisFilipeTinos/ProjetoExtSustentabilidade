@@ -15,6 +15,12 @@ public class PlayerControll2 : MonoBehaviour
 
     private bool isGrounded2; //Verificar se o personagem está no chão
 
+    public float knockbackForce2;
+    public float knockbackCount2;
+    public float knockbackTime2;
+
+    public bool isKnockRight2;
+
     private void Awake()
     {
         rb2 = GetComponent<Rigidbody2D>(); //Pega o RigidBody2d
@@ -22,9 +28,44 @@ public class PlayerControll2 : MonoBehaviour
 
     private void Update() //Método que será chamado a cada frame por segundo
     {
+        Jump();
+    }
+    private void FixedUpdate() //Método para manipular a física
+    {
+        rb2.velocity = new Vector2(horizontal2 * speed2, rb2.velocity.y); //Lógica da física
+        KnockBack();
+    }
 
+
+
+    void KnockBack() //Método para o personagem sair voando apos levar dano
+    {
+        if (knockbackCount2 < 0)
+        {
+            Move(); //Método de pulo
+        }
+        else
+        {
+            if (isKnockRight2 == true)
+            {
+                rb2.velocity = new Vector2(-knockbackForce2, knockbackForce2); //Faz com que ele salte para a direita
+            }
+            if (isKnockRight2 == false)
+            {
+                rb2.velocity = new Vector2(knockbackForce2, knockbackForce2); //Faz com que ele salte para a esquerda
+            }
+        }
+        knockbackCount2 -= Time.deltaTime; //O contador sera diminuido a cada momento
+    }
+    
+
+    void Move()
+    {
         horizontal2 = Input.GetAxis(horizontalInputAxis2); //Pega a movimentação do personagem do eixo X
+    }
 
+    void Jump()
+    {
         if (Input.GetKeyDown(KeyCode.W) && isGrounded2) //Verifica se a seta pra cima foi pressionada e se está no chão
         {
             rb2.AddForce(Vector2.up * 600);
@@ -32,11 +73,8 @@ public class PlayerControll2 : MonoBehaviour
 
         isGrounded2 = Physics2D.OverlapCircle(groundCheck2.position, 0.2f, groundLayer2); //Verifica se algo está no chão, em um circulo invisivel
         //Caso esteja no chão, ele resulta em TRUE, se não, resultará em FALSE (significando que está fora do chão)
+        
     }
 
-    private void FixedUpdate() //Método para manipular a física
-    {
-        rb2.velocity = new Vector2(horizontal2 * speed2, rb2.velocity.y); //Lógica da física
-    }
 
 }
