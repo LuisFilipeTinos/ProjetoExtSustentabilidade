@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    [SerializeField] private int Level;    
     public void Selectlevel1()
     {
-
+        UnityEngine.SceneManagement.SceneManager.LoadScene(Level);
 
     }
 
