@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 8539081}
   - component: {fileID: 8539080}
   - component: {fileID: 8539079}
+  - component: {fileID: 8539082}
   m_Layer: 0
   m_Name: headDamage
   m_TagString: HeadEnemy
@@ -335,6 +336,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 17149844}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8539082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8539078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 706442652930594438fc0f75ed74e9fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9096629
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,10 +646,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 17149842}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2da8d6c0ca80582409cde76b215f0b62, type: 3}
+  m_Script: {fileID: 11500000, guid: 706442652930594438fc0f75ed74e9fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 2
 --- !u!1 &27515723
 GameObject:
   m_ObjectHideFlags: 0
@@ -5784,7 +5796,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599704584}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.06986285, y: -0.014949887, z: -0.0010471181, w: 0.99744403}
+  m_LocalRotation: {x: -0.069862865, y: -0.014949857, z: -0.0010471162, w: 0.99744403}
   m_LocalPosition: {x: 6.9652452, y: -1.8473177, z: -9.87658}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -11008,7 +11020,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287174594}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.06986285, y: -0.014949887, z: -0.0010471181, w: 0.99744403}
+  m_LocalRotation: {x: -0.069862865, y: -0.014949857, z: -0.0010471162, w: 0.99744403}
   m_LocalPosition: {x: 6.9652452, y: -1.8473177, z: -9.87658}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15200,10 +15212,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.5
   ground: 1
-  groundCheck: {fileID: 0}
+  groundCheck: {fileID: 130230311}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   direction: 1
 --- !u!1 &1887294341
 GameObject:

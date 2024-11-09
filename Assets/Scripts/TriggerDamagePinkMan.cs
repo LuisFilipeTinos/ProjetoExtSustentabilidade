@@ -12,12 +12,11 @@ public class TriggerDamagePinkMan : MonoBehaviour
 
     private bool isInvinciblePinkMan2 = false; //Controla a invencibilidade do PinkMan
 
-    //private float invincibilityDuration2 = 1.0f; //Duração da invencibilidade
-    //private float lastDamageTimePinkMan2 = -Mathf.Infinity; //Marca o último momento em que o PinkMan levou dano
+    private BoxCollider2D boxColliderPinkMan;
 
     private void Start()
     {
-
+        boxColliderPinkMan = GetComponent<BoxCollider2D>();
     }
 
 
@@ -27,6 +26,7 @@ public class TriggerDamagePinkMan : MonoBehaviour
         {
             if (!isInvinciblePinkMan2)
             {
+                boxColliderPinkMan.enabled = false;
                 StartCoroutine(HandleDamagePinkMan2());
                 //lastDamageTimePinkMan2 = Time.time; //Atualiza o tempo do último dano recebido 
             }
@@ -61,6 +61,7 @@ public class TriggerDamagePinkMan : MonoBehaviour
 
         //yield return new WaitForSeconds(invincibilityDuration2); //Aguarda alguns segundos
 
+        boxColliderPinkMan.enabled = true;
         isInvinciblePinkMan2 = false; //Desativa a invencibilidade
     }
 }

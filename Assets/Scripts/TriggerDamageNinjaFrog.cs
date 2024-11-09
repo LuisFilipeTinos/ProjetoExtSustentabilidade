@@ -12,12 +12,14 @@ public class TriggerDamageNinjaFrog : MonoBehaviour
 
     private bool isInvincibleNinjaFrog2 = false; //Controla a invencibilidade do NinjaFrog
 
+    private BoxCollider2D boxColliderNinjaFrog;
+
     //private float invincibilityDuration2 = 1.0f; //Duração da invencibilidade
     //private float lastDamageTimeNinjaFrog2 = -Mathf.Infinity; //Marca o último momento em que o NinjaFrog levou dano
 
     private void Start()
     {
-
+        boxColliderNinjaFrog = GetComponent<BoxCollider2D>();
     }
 
 
@@ -27,6 +29,7 @@ public class TriggerDamageNinjaFrog : MonoBehaviour
         {
             if (!isInvincibleNinjaFrog2)
             {
+                boxColliderNinjaFrog.enabled = false;
                 StartCoroutine(HandleDamageNinjaFrog2());
                 //lastDamageTimeNinjaFrog2 = Time.time; //Atualiza o tempo do último dano recebido 
             }
@@ -62,6 +65,7 @@ public class TriggerDamageNinjaFrog : MonoBehaviour
 
         //yield return new WaitForSeconds(invincibilityDuration2); //Aguarda alguns segundos
 
+        boxColliderNinjaFrog.enabled = true;
         isInvincibleNinjaFrog2 = false; //Desativa a invencibilidade
     }
 }

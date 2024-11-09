@@ -32,7 +32,7 @@ public class EnemySlimerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Obstacle")) //Verifica se encostou com algum objeto cmo a tag de Obstacle
+        if (collision.gameObject.CompareTag("Obstacle") || collision.gameObject.CompareTag("Enemy")) //Verifica se encostou com algum objeto cmo a tag de Obstacle
         {
             direction *= -1; //Muda para a direção contrária da atual
             FlipSprite(); //Método para alternar a direção visual do objeto
