@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+
     // Controle do menu
     public void StartGame()
     {
@@ -23,8 +24,11 @@ public class NewBehaviourScript : MonoBehaviour
         // Codigo para fechar a aplicação
         Application.Quit();
     }
+
     public void Returnback()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
+
+
 }
