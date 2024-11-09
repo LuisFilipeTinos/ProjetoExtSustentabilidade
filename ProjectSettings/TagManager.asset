@@ -4,7 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - End
+  - Ground
+  - Obstacle
+  - Enemy
+  - HeadEnemy
   layers:
   - Default
   - TransparentFX
