@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.LowLevel;
 using UnityEngine.UI;
@@ -64,26 +65,37 @@ public class HeartSystem : MonoBehaviour
 
     }
 
-    void DeathState()
+    public void KillDamage()
+    {
+        life = 0;
+        heart[1].sprite = breakHeart;
+        heart[2].sprite = breakHeart;
+        heart[3].sprite = breakHeart;
+        DeathState();
+    }
+
+    public void DeathState()
     {
         if (life <= 0)
         {
 
-            GameObject objNinjaFrog= GameObject.Find(Player1); //Atribui a variavel do tipo GAMEOBJECT o nome do objeto referente ao player, para poder fazer a condição necessária
+            GameObject objNinjaFrog = GameObject.Find(Player1); //Atribui a variavel do tipo GAMEOBJECT o nome do objeto referente ao player, para poder fazer a condição necessária
             GameObject objPinkMan = GameObject.Find(Player2);
 
             if (gameObject.name == Player1) //Se o NinjaFrog chegar a 0 de vida ou menos, ele será destruido
             {
-                Destroy(objNinjaFrog); //Destroi o objeto NinjaFrog
+                objNinjaFrog.SetActive(false);
                 Debug.Log("Objeto destruido1");
                 NinjaFrogDeath.color = Color.red; //Muda a cor da imagem para vermelho
+                Destroy(objNinjaFrog); //Destroi o objeto NinjaFrog
             }
 
             if (gameObject.name == Player2) //Se o PinkMan chegar a 0 de vida ou menos, ele será destruido
             {
-                Destroy(objPinkMan); //Destroi o objeto PinkMan
+                objPinkMan.SetActive(false);
                 Debug.Log("Objeto destruido2");
-                PinkManDeath.color = Color.red;  //Muda a cor da imagem para vermelho            
+                PinkManDeath.color = Color.red;  //Muda a cor da imagem para vermelho
+                Destroy(objPinkMan); //Destroi o objeto PinkMan
             }
 
         }

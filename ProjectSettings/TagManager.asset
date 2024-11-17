@@ -8,6 +8,8 @@ TagManager:
   - Obstacle
   - Enemy
   - HeadEnemy
+  - Void
+  - GiantEnemy
   layers:
   - Default
   - TransparentFX
