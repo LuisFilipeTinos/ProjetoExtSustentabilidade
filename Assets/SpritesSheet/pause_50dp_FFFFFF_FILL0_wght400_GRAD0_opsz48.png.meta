@@ -164,7 +164,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pause_50dp_FFFFFF_FILL0_wght400_GRAD0_opsz48_0: 201861570921754845
+      pause_50dp_FFFFFF_FILL0_wght400_GRAD0_opsz48_1: 3306091087802156028
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      arrow_right_alt_34dp_FFFFFF_FILL0_wght400_GRAD0_opsz40_0: 2674174304884634812
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
