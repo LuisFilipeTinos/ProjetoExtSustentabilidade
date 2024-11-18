@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CreditsController : MonoBehaviour
 {
@@ -11,20 +12,21 @@ public class CreditsController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        start = transform.position;
-        end = transform.position * (-8) ;
+        Invoke("ReturnAfterEnd", 14f);
+       
     }
 
  
     void Update()
     {
         transform.Translate(Vector3.up * speed * Time.deltaTime);
-        if(this.transform.position.y > end.y) 
-        {
-            this.transform.position = start;
-        }
          
     }
 
+    private void ReturnAfterEnd()
+    {
+
+        SceneManager.LoadScene(0);
+    }
 
 }
