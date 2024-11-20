@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class CollectLetter : MonoBehaviour
 {
+
+    public bool Win = false;
+
     public static CollectLetter Instance;  // Instância única para acessar o CollectLetter
 
     public TextMeshProUGUI wordText;  // UI Text para mostrar a palavra formada
@@ -31,8 +34,7 @@ public class CollectLetter : MonoBehaviour
             // Verifica se a palavra formada está completa
             if (currentWord == targetWord)
             {
-                Debug.Log("Parabéns! Você completou a palavra!");
-                // Adicione lógica de vitória aqui
+                Win = true;
             }
             return true; // Indica que a letra foi coletada com sucesso
         }
