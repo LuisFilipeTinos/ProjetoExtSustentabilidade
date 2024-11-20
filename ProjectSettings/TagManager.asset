@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Obstacle
+  - Enemy
+  - HeadEnemy
+  - Void
+  - GiantEnemy
   layers:
   - Default
   - TransparentFX
