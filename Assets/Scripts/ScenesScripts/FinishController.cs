@@ -27,9 +27,4 @@ public class FinishController : MonoBehaviour
 
     }
 
-    private void NextLevel()
-    {
-
-    }
-
 }

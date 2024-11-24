@@ -15,19 +15,14 @@ public class GameOverscene : MonoBehaviour
     [SerializeField] GameObject ResumeBtt;
     [SerializeField] GameObject PauseBtt;
 
-    private bool Win;
 
      void Start()
      {
         Time.timeScale = 1;
-        Win = GetComponent<CollectLetter>();
 
      }
     void Update()
     {
-
-        if (Win)
-            Debug.Log("SAdesgraça tá funcionando");
 
 
         if (Playertwo == null && Playerone == null )

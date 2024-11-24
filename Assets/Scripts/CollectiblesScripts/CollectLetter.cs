@@ -8,7 +8,6 @@ public class CollectLetter : MonoBehaviour
 {
     [SerializeField] GameObject barrer;
     
-    public bool Win = false;
 
     public static CollectLetter Instance;  // Instância única para acessar o CollectLetter
 
