@@ -22,6 +22,8 @@ public class PlayerControll1 : MonoBehaviour
     public bool isKnockRight;
 
     public Animator anim;
+    public bool isDialogueActive = false; // Flag para verificar se o diálogo está ativo
+
 
     private void Awake()
     {
