@@ -13,7 +13,7 @@ public class CreditsController : MonoBehaviour
     void Start()
     {
         Invoke("ReturnAfterEnd", 14f);
-       
+        Time.timeScale = 1;
     }
 
  

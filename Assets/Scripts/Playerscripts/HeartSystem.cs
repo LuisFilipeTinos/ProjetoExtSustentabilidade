@@ -1,9 +1,11 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.LowLevel;
 using UnityEngine.UI;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class HeartSystem : MonoBehaviour
 {
@@ -20,6 +22,9 @@ public class HeartSystem : MonoBehaviour
     public Image NinjaFrogDeath;
     public Image PinkManDeath;
 
+    public GameObject camera1;
+    public GameObject camera2;
+    public GameObject camera3;
 
     private void Awake()
     {
@@ -88,6 +93,8 @@ public class HeartSystem : MonoBehaviour
                 Debug.Log("Objeto destruido1");
                 NinjaFrogDeath.color = Color.red; //Muda a cor da imagem para vermelho
                 Destroy(objNinjaFrog); //Destroi o objeto NinjaFrog
+                camera1.SetActive(false);
+                camera3.SetActive(true);
             }
 
             if (gameObject.name == Player2) //Se o PinkMan chegar a 0 de vida ou menos, ele será destruido
@@ -96,6 +103,8 @@ public class HeartSystem : MonoBehaviour
                 Debug.Log("Objeto destruido2");
                 PinkManDeath.color = Color.red;  //Muda a cor da imagem para vermelho
                 Destroy(objPinkMan); //Destroi o objeto PinkMan
+                camera1.SetActive(false);
+                camera2.SetActive(true);
             }
 
         }
